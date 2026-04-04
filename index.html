@@ -7,9 +7,9 @@
   <style>
     /* ─── Палитра ──────────────────────────────────── */
     :root {
-      --terracotta: #934900;
+      --terracotta: #7A2020;
       --charcoal:   #32323A;
-      --wine:       #7A2020;
+      --wine:       #934900;
       --ash:        #D9D9D9;
       --olive:      #595D3A;
       --cream:      #FAF7F2;
@@ -21,7 +21,7 @@
 
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
-      background: var(--cream);
+      background: var(--charcoal);
       color: var(--charcoal);
       line-height: 1.7;
     }
@@ -75,15 +75,20 @@
 
     /* ─── Герой ────────────────────────────────────── */
     .hero {
-      min-height: 100vh;
+      height: 100vh;
       padding-top: 64px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+      align-items: stretch;
+      background: var(--terracotta);
     }
 
     .hero-text {
       padding: 5% 8% 5% 10%;
+      background: var(--terracotta);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-text .eyebrow {
@@ -91,25 +96,25 @@
       font-size: 0.75rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--olive);
+      color: rgba(255,255,255,0.55);
       margin-bottom: 1.8rem;
     }
 
     .hero-text h1 {
       font-size: clamp(2.2rem, 4vw, 3.4rem);
-      color: var(--charcoal);
+      color: #fff;
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
 
     .hero-text h1 em {
       font-style: normal;
-      color: var(--terracotta);
+      color: rgba(255,255,255,0.65);
     }
 
     .hero-text p {
       font-size: 1.05rem;
-      color: #555;
+      color: rgba(255,255,255,0.75);
       max-width: 460px;
       margin-bottom: 2.5rem;
       line-height: 1.8;
@@ -120,23 +125,8 @@
     .btn-primary {
       display: inline-block;
       padding: 0.9rem 2.2rem;
-      background: var(--terracotta);
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Arial', sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      transition: background 0.25s;
-    }
-
-    .btn-primary:hover { background: #7a3d00; }
-
-    .btn-outline {
-      display: inline-block;
-      padding: 0.9rem 2.2rem;
-      border: 1.5px solid var(--charcoal);
-      color: var(--charcoal);
+      background: #fff;
+      color: var(--terracotta);
       text-decoration: none;
       font-family: 'Arial', sans-serif;
       font-size: 0.82rem;
@@ -145,16 +135,38 @@
       transition: background 0.25s, color 0.25s;
     }
 
-    .btn-outline:hover { background: var(--charcoal); color: #fff; }
+    .btn-primary:hover { background: var(--charcoal); color: #fff; }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,0.12); }
 
     .hero-visual {
-      height: 100vh;
       background: var(--olive);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+    }
+
+    .hero-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
 
     .hero-visual .deco-circle-1 {
@@ -188,6 +200,7 @@
       z-index: 2;
       padding: 3rem 3rem 3.5rem;
       border-top: 1px solid rgba(255,255,255,0.2);
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
     }
 
     .hero-quote blockquote {
@@ -220,7 +233,7 @@
 
     .stat .num {
       font-size: 2rem;
-      color: var(--terracotta);
+      color: #fff;
       line-height: 1;
       margin-bottom: 0.3rem;
     }
@@ -230,13 +243,13 @@
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #888;
+      color: rgba(255,255,255,0.45);
     }
 
     /* ─── Услуги ────────────────────────────────────── */
     #services {
       padding: 8rem 10%;
-      background: #fff;
+      background: var(--terracotta);
     }
 
     .section-label {
@@ -244,18 +257,18 @@
       font-size: 0.72rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--terracotta);
+      color: rgba(255,255,255,0.5);
       margin-bottom: 0.75rem;
     }
 
     .section-title {
       font-size: clamp(1.7rem, 3vw, 2.5rem);
-      color: var(--charcoal);
+      color: #fff;
       margin-bottom: 1rem;
     }
 
     .section-subtitle {
-      color: #666;
+      color: rgba(255,255,255,0.7);
       font-size: 1rem;
       max-width: 560px;
       margin-bottom: 4.5rem;
@@ -270,27 +283,27 @@
 
     .service-card {
       padding: 2.5rem 2rem 2.5rem;
-      background: var(--cream);
-      transition: background 0.25s, transform 0.25s;
+      background: rgba(0,0,0,0.25);
+      transition: background 0.25s;
       position: relative;
       cursor: default;
     }
 
     .service-card:hover {
-      background: var(--charcoal);
+      background: rgba(0,0,0,0.4);
     }
 
     .service-card:hover h3,
     .service-card:hover p,
     .service-card:hover .s-tag {
-      color: var(--ash);
+      color: #fff;
     }
 
-    .service-card:hover .icon { background: var(--terracotta); }
+    .service-card:hover .icon { background: var(--olive); }
 
     .service-card .icon {
       width: 46px; height: 46px;
-      background: var(--olive);
+      background: rgba(255,255,255,0.15);
       margin-bottom: 1.8rem;
       display: flex;
       align-items: center;
@@ -309,14 +322,14 @@
 
     .service-card h3 {
       font-size: 1.08rem;
-      color: var(--charcoal);
+      color: #fff;
       margin-bottom: 0.7rem;
       transition: color 0.25s;
     }
 
     .service-card p {
       font-size: 0.9rem;
-      color: #666;
+      color: rgba(255,255,255,0.65);
       line-height: 1.7;
       transition: color 0.25s;
     }
@@ -328,7 +341,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--terracotta);
+      color: rgba(255,255,255,0.4);
       transition: color 0.25s;
     }
 
@@ -337,7 +350,7 @@
       top: 1.8rem; right: 1.8rem;
       font-family: 'Arial', sans-serif;
       font-size: 0.68rem;
-      color: var(--ash);
+      color: rgba(255,255,255,0.2);
       letter-spacing: 0.1em;
     }
 
@@ -536,38 +549,79 @@
       opacity: 0.5;
     }
 
-    /* ─── Подход ────────────────────────────────────── */
-    #approach {
-      padding: 8rem 10%;
-      background: #fff;
+    /* ─── Фото-полоса ───────────────────────────────── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+      background: var(--charcoal);
     }
 
-    .approach-steps {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    .photo-strip-item {
+      aspect-ratio: 3/4;
+      overflow: hidden;
       position: relative;
     }
 
-    .approach-steps::before {
-      content: '';
-      position: absolute;
-      top: 27px; left: 2px; right: 2px;
-      height: 1px;
-      background: var(--ash);
+    .photo-strip-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.5s ease;
     }
 
-    .step { padding: 0 2rem 0 0; }
+    .photo-strip-item:hover img { transform: scale(1.04); }
+
+    /* Фото в подходе */
+    .approach-with-photo {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+      margin-top: 5rem;
+    }
+
+    .approach-photo {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: sticky;
+      top: 90px;
+    }
+
+    .approach-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ─── Подход ────────────────────────────────────── */
+    #approach {
+      padding: 8rem 10%;
+      background: var(--cream);
+    }
+
+    #approach .section-label { color: var(--terracotta); }
+    #approach .section-title { color: var(--charcoal); }
+    #approach .section-subtitle { color: #666; }
+
+    .approach-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .step { padding: 0; }
 
     .step-dot {
       width: 54px; height: 54px;
       border-radius: 50%;
-      background: #fff;
+      background: var(--cream);
       border: 1.5px solid var(--ash);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 2.2rem;
+      margin-bottom: 1rem;
       font-family: 'Arial', sans-serif;
       font-size: 0.75rem;
       color: var(--terracotta);
@@ -690,20 +744,20 @@
       grid-template-columns: 1fr 1fr;
       gap: 7rem;
       align-items: start;
-      background: var(--cream);
+      background: var(--charcoal);
     }
 
-    #contact .section-label { color: var(--terracotta); }
+    #contact .section-label { color: rgba(255,255,255,0.4); }
 
     #contact h2 {
       font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      color: var(--charcoal);
+      color: #fff;
       margin-bottom: 1.2rem;
     }
 
     #contact > div > p {
       font-size: 0.97rem;
-      color: #666;
+      color: rgba(255,255,255,0.6);
       line-height: 1.8;
       margin-bottom: 2.5rem;
     }
@@ -719,17 +773,17 @@
       align-items: center;
       gap: 1.2rem;
       text-decoration: none;
-      color: var(--charcoal);
+      color: rgba(255,255,255,0.8);
       font-family: 'Arial', sans-serif;
       font-size: 0.85rem;
       transition: color 0.2s;
     }
 
-    .channel:hover { color: var(--terracotta); }
+    .channel:hover { color: #fff; }
 
     .channel-icon {
       width: 40px; height: 40px;
-      background: var(--charcoal);
+      background: rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -753,7 +807,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #aaa;
+      color: rgba(255,255,255,0.35);
       margin-bottom: 0.15rem;
     }
 
@@ -768,9 +822,9 @@
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
-      background: #fff;
-      border: 1.5px solid var(--ash);
-      color: var(--charcoal);
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      color: #fff;
       padding: 0.9rem 1.1rem;
       font-family: 'Arial', sans-serif;
       font-size: 0.88rem;
@@ -794,7 +848,7 @@
     .btn-dark {
       display: inline-block;
       padding: 0.95rem 2.5rem;
-      background: var(--charcoal);
+      background: var(--terracotta);
       color: #fff;
       border: none;
       font-family: 'Arial', sans-serif;
@@ -806,12 +860,12 @@
       align-self: flex-start;
     }
 
-    .btn-dark:hover { background: var(--terracotta); }
+    .btn-dark:hover { background: #5a1515; }
 
     .form-note {
       font-family: 'Arial', sans-serif;
       font-size: 0.72rem;
-      color: #aaa;
+      color: rgba(255,255,255,0.3);
       letter-spacing: 0.04em;
     }
 
@@ -1080,20 +1134,23 @@
     @media (max-width: 960px) {
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .hero-text { padding: 3rem 6%; }
+      .hero-text { padding: 3rem 6%; min-height: auto; }
       #about { grid-template-columns: 1fr; gap: 3rem; }
       .about-photo-wrap { display: none; }
       #contact { grid-template-columns: 1fr; gap: 3rem; }
       .audience-grid { grid-template-columns: 1fr; }
       .projects-row { grid-template-columns: 1fr; }
-      .approach-steps { grid-template-columns: 1fr 1fr; gap: 3rem; }
-      .approach-steps::before { display: none; }
+      .approach-with-photo { grid-template-columns: 1fr; gap: 3rem; }
+      .approach-photo { display: none; }
       .form-row { grid-template-columns: 1fr; }
       nav ul { display: none; }
+      .photo-strip { grid-template-columns: 1fr 1fr; }
+      .photo-strip-item:last-child { display: none; }
     }
 
     @media (max-width: 580px) {
-      .approach-steps { grid-template-columns: 1fr; }
+      .photo-strip { grid-template-columns: 1fr; }
+      .photo-strip-item:last-child { display: block; }
     }
   </style>
 </head>
@@ -1116,17 +1173,17 @@
   <section id="brand">
 
     <div class="brand-header">
-      <h2>Ирина, вот что мы предлагаем</h2>
+      <h2>Ирина, вот что я предлагаю</h2>
       <p>Цвета, шрифты и характер вашего бренда — смотрите и говорите, что откликается</p>
     </div>
 
     <!-- 1. Цветовая палитра -->
     <p class="brand-section-label">01 — Цветовая палитра</p>
     <div class="swatches">
-      <div class="swatch" style="background:#934900;">
+      <div class="swatch" style="background:#7A2020;">
         <div class="swatch-inner">
-          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#934900</span>
-          <span class="swatch-name" style="color:#fff">Терракот</span>
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#7A2020</span>
+          <span class="swatch-name" style="color:#fff">Бордо</span>
           <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Главный акцент</span>
         </div>
       </div>
@@ -1137,10 +1194,10 @@
           <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Текст · фоны</span>
         </div>
       </div>
-      <div class="swatch" style="background:#7A2020;">
+      <div class="swatch" style="background:#934900;">
         <div class="swatch-inner">
-          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#7A2020</span>
-          <span class="swatch-name" style="color:#fff">Бордо</span>
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#934900</span>
+          <span class="swatch-name" style="color:#fff">Терракот</span>
           <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Акцент 2</span>
         </div>
       </div>
@@ -1173,7 +1230,7 @@
       <div class="font-card">
         <p class="font-meta">Заголовки · Georgia / Serif</p>
         <div class="font-sample-serif">Ирина<br>Астафьева</div>
-        <p class="font-desc">Мы предлагаем Georgia для всех ваших заголовков. Это классический serif — с весом и характером, но без казённой строгости. Именно он даёт ощущение «профессионал, которому доверяют».</p>
+        <p class="font-desc">Я предлагаю Georgia для всех ваших заголовков. Это классический serif — с весом и характером, но без казённой строгости. Именно он даёт ощущение «профессионал, которому доверяют».</p>
       </div>
       <div class="font-card">
         <p class="font-meta">Текст · Arial / Sans-serif</p>
@@ -1190,7 +1247,7 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
         <h4>Тон голоса</h4>
-        <p>Вы сказали: прямой, честный, немного дерзкий. Мы сохраняем это в каждой строке. Никаких «позвольте предложить» — только конкретно и по делу.</p>
+        <p>Вы сказали: прямой, честный, немного дерзкий. Я сохраняю это в каждой строке. Никаких «позвольте предложить» — только конкретно и по делу.</p>
         <div class="style-words">
           <span class="style-word">Прямой</span>
           <span class="style-word">Честный</span>
@@ -1230,7 +1287,7 @@
     <div class="hero-text">
       <p class="eyebrow">Главный экран — первое, что видит посетитель</p>
       <h1>Вы — Ирина Астафьева.<br>Поведенческий<br><em>аналитик и супервизор.</em></h1>
-      <p>Это ваш главный экран. Мы предлагаем сразу назвать вас и вашу роль — без загадок. Посетитель за секунду понимает, кто вы и чем занимаетесь.</p>
+      <p>Это ваш главный экран. Я предлагаю сразу назвать вас и вашу роль — без загадок. Посетитель за секунду понимает, кто вы и чем занимаетесь.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">Записаться</a>
         <a href="#services" class="btn-outline">Услуги</a>
@@ -1251,9 +1308,7 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="deco-circle-1"></div>
-      <div class="deco-circle-2"></div>
-      <div class="deco-line"></div>
+      <img src="photo/hero-block.jpg" alt="Ирина Астафьева" />
       <div class="hero-quote">
         <blockquote>
           «Меня угнетает, что не везде работают так же хорошо, как у нас. Поэтому я обучаю специалистов — и поднимаю стандарт в профессии.»
@@ -1265,9 +1320,9 @@
 
   <!-- Услуги -->
   <section id="services">
-    <p class="section-label">Раздел услуг — вот как мы предлагаем их подать</p>
+    <p class="section-label">Раздел услуг — вот как я предлагаю их подать</p>
     <h2 class="section-title">Ваши услуги</h2>
-    <p class="section-subtitle">Мы выделили четыре направления по тому, что вы рассказали. Названия и описания — рабочий вариант, скажите что поправить.</p>
+    <p class="section-subtitle">Я выделила четыре направления по тому, что вы рассказали. Названия и описания — рабочий вариант, скажите что поправить.</p>
 
     <div class="services-grid">
       <div class="service-card">
@@ -1286,7 +1341,7 @@
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <h3>Консультация для родителей</h3>
-        <p>Второе ключевое направление. Родители приходят за ясностью — мы предлагаем говорить с ними прямо: без обещаний лишнего, зато с конкретным результатом.</p>
+        <p>Второе ключевое направление. Родители приходят за ясностью — я предлагаю говорить с ними прямо: без обещаний лишнего, зато с конкретным результатом.</p>
         <span class="s-tag">Для родителей детей с особенностями</span>
       </div>
 
@@ -1296,7 +1351,7 @@
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         </div>
         <h3>Групповые супервизии</h3>
-        <p>Формат для команд и небольших групп. Вы упоминали его как отдельное направление — мы вынесли его в самостоятельную карточку, чтобы команды видели, что это про них.</p>
+        <p>Формат для команд и небольших групп. Вы упоминали его как отдельное направление — я вынесла его в самостоятельную карточку, чтобы команды видели, что это про них.</p>
         <span class="s-tag">Для команд и групп</span>
       </div>
 
@@ -1316,14 +1371,14 @@
   <section id="about">
     <div class="about-photo-wrap">
       <div class="about-photo">
-        <div class="about-photo-placeholder">Ваше фото</div>
+        <img src="photo/DSC_3313_resized.jpg" alt="Ирина Астафьева" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
       </div>
     </div>
     <div class="about-text">
       <p class="eyebrow">Раздел «О вас» — вот наш вариант текста</p>
       <h2>Ирина Астафьева</h2>
       <p class="title-role">Поведенческий аналитик · Супервизор · ИП</p>
-      <p>Мы написали этот текст на основе того, что вы рассказали. Прочитайте — и скажите, что звучит точно, а что нужно поправить вашими словами.</p>
+      <p>Я написала этот текст на основе того, что вы рассказали. Прочитайте — и скажите, что звучит точно, а что нужно поправить вашими словами.</p>
       <p>Я прихожу на работу и чувствую <strong>физическое ощущение счастья</strong>. Работаю с детьми с особенностями развития и с теми, кто этих детей сопровождает. От качества специалиста зависит жизнь ребёнка — поэтому не делаю скидок ни себе, ни тем, кого обучаю.</p>
       <p>Прямая. Честная. Иду к тому, чтобы быть лучшим специалистом в своей сфере — и делаю это планомерно каждый день.</p>
       <div class="credentials">
@@ -1337,7 +1392,7 @@
 
   <!-- Для кого -->
   <section id="audience">
-    <p class="section-label">Ваши две аудитории — мы разделили их визуально</p>
+    <p class="section-label">Ваши две аудитории — я разделила их визуально</p>
     <h2 class="section-title">Для кого вы работаете</h2>
 
     <div class="audience-grid">
@@ -1345,7 +1400,7 @@
         <span class="big-letter">С</span>
         <p class="a-label">Аудитория 01</p>
         <h3>Специалисты</h3>
-        <p>Вы сказали: специалисты — основная аудитория. Мы предлагаем говорить с ними напрямую: супервизия — это не проверка, это возможность расти. Список ниже — примерный, поправьте под себя.</p>
+        <p>Вы сказали: специалисты — основная аудитория. Я предлагаю говорить с ними напрямую: супервизия — это не проверка, это возможность расти. Список ниже — примерный, поправьте под себя.</p>
         <ul>
           <li>Разбор сложных случаев</li>
           <li>Анализ программ и данных</li>
@@ -1355,10 +1410,11 @@
       </div>
 
       <div class="audience-card for-parents">
+        <img src="photo/kids-akcent.jpg" alt="" style="position:absolute;bottom:0;right:0;width:180px;height:180px;object-fit:cover;object-position:center;opacity:0.18;pointer-events:none;" />
         <span class="big-letter">Р</span>
         <p class="a-label">Аудитория 02</p>
         <h3>Родители</h3>
-        <p>Вторая важная аудитория — родители детей с особенностями. Они устали от размытых советов. Мы предлагаем говорить с ними вашим языком: прямо, без лишнего, с уважением к их ситуации.</p>
+        <p>Вторая важная аудитория — родители детей с особенностями. Они устали от размытых советов. Я предлагаю говорить с ними вашим языком: прямо, без лишнего, с уважением к их ситуации.</p>
         <ul>
           <li>Анализ поведения ребёнка</li>
           <li>Стратегии для дома и школы</li>
@@ -1369,32 +1425,50 @@
     </div>
   </section>
 
+  <!-- Фото-полоса -->
+  <div class="photo-strip">
+    <div class="photo-strip-item">
+      <img src="photo/strogo.jpg" alt="" />
+    </div>
+    <div class="photo-strip-item">
+      <img src="photo/tiho_rot.jpg" alt="" />
+    </div>
+    <div class="photo-strip-item">
+      <img src="photo/prosto_krasivaya_kartinka.jpg" alt="" />
+    </div>
+  </div>
+
   <!-- Подход -->
   <section id="approach">
     <p class="section-label">Как выглядит процесс работы с вами — наш вариант</p>
     <h2 class="section-title">Без воды. По делу.</h2>
     <p class="section-subtitle">Вы говорили, что хотите профессионально, но не строго. Этот блок показывает структуру — посетитель понимает, что его ждёт и как вы работаете.</p>
 
-    <div class="approach-steps">
-      <div class="step">
-        <div class="step-dot">01</div>
-        <h3>Запрос</h3>
-        <p>Посетитель оставляет заявку или пишет в мессенджер — вы сказали, что это предпочтительный канал.</p>
+    <div class="approach-with-photo">
+      <div class="approach-photo">
+        <img src="photo/zamok.jpg" alt="Ирина Астафьева" />
       </div>
-      <div class="step">
-        <div class="step-dot">02</div>
-        <h3>Знакомство</h3>
-        <p>Первичная встреча: понимаем запрос, договариваемся о формате. Без лишних обязательств с обеих сторон.</p>
-      </div>
-      <div class="step">
-        <div class="step-dot">03</div>
-        <h3>Работа</h3>
-        <p>Супервизия, консультация или проект — в выбранном формате. Конкретно, измеримо, в срок.</p>
-      </div>
-      <div class="step">
-        <div class="step-dot">04</div>
-        <h3>Результат</h3>
-        <p>Чёткие рекомендации. Человек уходит зная, что делать дальше — и возвращается снова.</p>
+      <div class="approach-steps">
+        <div class="step">
+          <div class="step-dot">01</div>
+          <h3>Запрос</h3>
+          <p>Посетитель оставляет заявку или пишет в мессенджер — вы сказали, что это предпочтительный канал.</p>
+        </div>
+        <div class="step">
+          <div class="step-dot">02</div>
+          <h3>Знакомство</h3>
+          <p>Первичная встреча: понимаем запрос, договариваемся о формате. Без лишних обязательств с обеих сторон.</p>
+        </div>
+        <div class="step">
+          <div class="step-dot">03</div>
+          <h3>Работа</h3>
+          <p>Супервизия, консультация или проект — в выбранном формате. Конкретно, измеримо, в срок.</p>
+        </div>
+        <div class="step">
+          <div class="step-dot">04</div>
+          <h3>Результат</h3>
+          <p>Чёткие рекомендации. Человек уходит зная, что делать дальше — и возвращается снова.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1403,7 +1477,7 @@
   <section id="projects">
     <p class="section-label">Раздел проектов — живой, будем обновлять</p>
     <h2 class="section-title">Ваши крупные форматы</h2>
-    <p class="section-subtitle">Вы говорили о большом проекте — лекции на 300 человек. Мы сделали для него featured-карточку. Остальное — шаблоны, которые легко обновлять под каждое новое мероприятие.</p>
+    <p class="section-subtitle">Вы говорили о большом проекте — лекции на 300 человек. Я сделала для него featured-карточку. Остальное — шаблоны, которые легко обновлять под каждое новое мероприятие.</p>
 
     <div class="projects-row">
       <div class="project-featured">
@@ -1427,9 +1501,9 @@
   <!-- Контакт -->
   <section id="contact">
     <div>
-      <p class="section-label">Форма записи — вот как мы предлагаем её оформить</p>
+      <p class="section-label">Форма записи — вот как я предлагаю её оформить</p>
       <h2>Как с вами связаться</h2>
-      <p>Вы сказали, что Telegram — предпочтительный канал. Мы поставили его первым. Форма — для тех, кому удобнее написать через сайт. Добавьте реальные контакты — и блок готов.</p>
+      <p>Вы сказали, что Telegram — предпочтительный канал. Я поставила его первым. Форма — для тех, кому удобнее написать через сайт. Добавьте реальные контакты — и блок готов.</p>
       <div class="contact-channels">
         <a href="#" class="channel">
           <div class="channel-icon">
