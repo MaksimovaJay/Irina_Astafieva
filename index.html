@@ -854,36 +854,205 @@
       flex-shrink: 0;
     }
 
-    /* ─── Демо палитра ──────────────────────────── */
-    #palette {
-      padding: 4rem 10%;
+    /* ─── Брендовый блок ────────────────────────── */
+    #brand {
+      padding: 7rem 10% 6rem;
       background: #1e1e24;
+      padding-top: calc(64px + 5rem);
     }
 
-    .palette-note {
+    .brand-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding-bottom: 2rem;
+    }
+
+    .brand-header h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: #fff;
+    }
+
+    .brand-header p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      max-width: 280px;
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    /* Палитра */
+    .brand-section-label {
       font-family: 'Arial', sans-serif;
       font-size: 0.68rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: rgba(217,217,217,0.3);
-      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 1.2rem;
     }
 
-    .swatches { display: flex; gap: 2px; }
+    .swatches {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 4.5rem;
+    }
 
     .swatch {
       flex: 1;
-      aspect-ratio: 1.2;
+      aspect-ratio: 0.85;
       position: relative;
+      transition: flex 0.3s;
     }
 
-    .swatch span {
+    .swatch:hover { flex: 1.4; }
+
+    .swatch-inner {
       position: absolute;
-      bottom: 0.6rem; left: 0.75rem;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem 0.85rem;
+    }
+
+    .swatch-hex {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+    }
+
+    .swatch-name {
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .swatch-role {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+      opacity: 0.55;
+    }
+
+    /* Шрифты */
+    .brand-fonts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 4.5rem;
+    }
+
+    .font-card {
+      background: rgba(255,255,255,0.04);
+      padding: 2.5rem 2.5rem 2rem;
+      border-top: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .font-card:first-child { border-top-color: var(--terracotta); }
+    .font-card:last-child  { border-top-color: var(--olive); }
+
+    .font-card .font-meta {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 1.2rem;
+    }
+
+    .font-card .font-sample-serif {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #fff;
+      line-height: 1.2;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+
+    .font-card .font-sample-sans {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .font-card .font-desc {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.65;
+    }
+
+    /* Стиль */
+    .brand-style {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .style-card {
+      background: rgba(255,255,255,0.04);
+      padding: 2rem 2rem 2.5rem;
+    }
+
+    .style-card .style-icon {
+      width: 40px; height: 40px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .style-card .style-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--terracotta);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .style-card h4 {
+      font-size: 0.97rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      font-weight: normal;
+    }
+
+    .style-card p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.65;
+    }
+
+    .style-card .style-words {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .style-word {
       font-family: 'Arial', sans-serif;
       font-size: 0.65rem;
-      letter-spacing: 0.06em;
-      line-height: 1.5;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.45);
     }
 
     /* ─── Футер ─────────────────────────────────── */
@@ -934,6 +1103,7 @@
   <nav>
     <div class="logo">Ирина <span>·</span> Астафьева</div>
     <ul>
+      <li><a href="#brand">Стиль</a></li>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#about">О специалисте</a></li>
       <li><a href="#audience">Для кого</a></li>
@@ -941,6 +1111,119 @@
       <li><a href="#contact">Запись</a></li>
     </ul>
   </nav>
+
+  <!-- Бренд / Стайлгайд -->
+  <section id="brand">
+
+    <div class="brand-header">
+      <h2>Визуальный стиль</h2>
+      <p>Цветовая палитра, типографика и характер бренда Ирины Астафьевой</p>
+    </div>
+
+    <!-- 1. Цветовая палитра -->
+    <p class="brand-section-label">01 — Цветовая палитра</p>
+    <div class="swatches">
+      <div class="swatch" style="background:#934900;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#934900</span>
+          <span class="swatch-name" style="color:#fff">Терракот</span>
+          <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Главный акцент</span>
+        </div>
+      </div>
+      <div class="swatch" style="background:#32323A;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#32323A</span>
+          <span class="swatch-name" style="color:#fff">Уголь</span>
+          <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Текст · фоны</span>
+        </div>
+      </div>
+      <div class="swatch" style="background:#7A2020;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#7A2020</span>
+          <span class="swatch-name" style="color:#fff">Бордо</span>
+          <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Акцент 2</span>
+        </div>
+      </div>
+      <div class="swatch" style="background:#595D3A;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(255,255,255,0.7)">#595D3A</span>
+          <span class="swatch-name" style="color:#fff">Олива</span>
+          <span class="swatch-role" style="color:rgba(255,255,255,0.5)">Спокойствие</span>
+        </div>
+      </div>
+      <div class="swatch" style="background:#D9D9D9;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(0,0,0,0.4)">#D9D9D9</span>
+          <span class="swatch-name" style="color:rgba(0,0,0,0.6)">Пепел</span>
+          <span class="swatch-role" style="color:rgba(0,0,0,0.3)">Нейтраль</span>
+        </div>
+      </div>
+      <div class="swatch" style="background:#FAF7F2;">
+        <div class="swatch-inner">
+          <span class="swatch-hex" style="color:rgba(0,0,0,0.35)">#FAF7F2</span>
+          <span class="swatch-name" style="color:rgba(0,0,0,0.5)">Крем</span>
+          <span class="swatch-role" style="color:rgba(0,0,0,0.25)">Фон · тепло</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Шрифт -->
+    <p class="brand-section-label">02 — Типографика</p>
+    <div class="brand-fonts">
+      <div class="font-card">
+        <p class="font-meta">Заголовки · Georgia / Serif</p>
+        <div class="font-sample-serif">Ирина<br>Астафьева</div>
+        <p class="font-desc">Классический serif — профессионализм, глубина, характер. Используется в заголовках H1–H3. Не строго, но весомо.</p>
+      </div>
+      <div class="font-card">
+        <p class="font-meta">Текст · Arial / Sans-serif</p>
+        <div class="font-sample-sans">Прямо.<br>Честно.<br>По делу.</div>
+        <p class="font-desc">Чистый гротеск без засечек — для подписей, навигации, кнопок, меток. Читается легко, держит темп.</p>
+      </div>
+    </div>
+
+    <!-- 3. Стиль -->
+    <p class="brand-section-label">03 — Характер бренда</p>
+    <div class="brand-style">
+      <div class="style-card">
+        <div class="style-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h4>Тон голоса</h4>
+        <p>Прямой, уверенный, без воды. Говорит как профессионал, которому незачем прятаться за вежливостью.</p>
+        <div class="style-words">
+          <span class="style-word">Прямой</span>
+          <span class="style-word">Честный</span>
+          <span class="style-word">Дерзкий</span>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="style-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Ощущение</h4>
+        <p>Тёплое, земное, надёжное. Не холодный корпоратив — живой человек с огромной любовью к своему делу.</p>
+        <div class="style-words">
+          <span class="style-word">Тёплый</span>
+          <span class="style-word">Надёжный</span>
+          <span class="style-word">Живой</span>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="style-icon">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h4>Позиция</h4>
+        <p>Лучший специалист в своём городе. Не заискивает, не уговаривает. Кто понимает ценность — тот приходит.</p>
+        <div class="style-words">
+          <span class="style-word">Уверенный</span>
+          <span class="style-word">Дорогой</span>
+          <span class="style-word">Лучший</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- Герой -->
   <section class="hero">
@@ -1216,31 +1499,6 @@
         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         Сведения об организации
       </a>
-    </div>
-  </section>
-
-  <!-- Демо-палитра -->
-  <section id="palette">
-    <p class="palette-note">Рабочая палитра — демо-блок (убрать в финале)</p>
-    <div class="swatches">
-      <div class="swatch" style="background:#934900;">
-        <span style="color:rgba(255,255,255,0.75)">#934900<br>Терракот<br><em>главный акцент</em></span>
-      </div>
-      <div class="swatch" style="background:#32323A;">
-        <span style="color:rgba(255,255,255,0.75)">#32323A<br>Уголь<br><em>текст / фоны</em></span>
-      </div>
-      <div class="swatch" style="background:#7A2020;">
-        <span style="color:rgba(255,255,255,0.75)">#7A2020<br>Бордо<br><em>↓ смягчён с #8F0D0D</em></span>
-      </div>
-      <div class="swatch" style="background:#D9D9D9;">
-        <span style="color:rgba(0,0,0,0.45)">#D9D9D9<br>Пепел<br><em>нейтраль</em></span>
-      </div>
-      <div class="swatch" style="background:#595D3A;">
-        <span style="color:rgba(255,255,255,0.75)">#595D3A<br>Олива<br><em>спокойствие</em></span>
-      </div>
-      <div class="swatch" style="background:#FAF7F2;">
-        <span style="color:rgba(0,0,0,0.4)">#FAF7F2<br>Крем<br><em>+ добавлен</em></span>
-      </div>
     </div>
   </section>
 
