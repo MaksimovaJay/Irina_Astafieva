@@ -1133,6 +1133,416 @@
 
     footer a:hover { color: var(--terracotta); }
 
+    /* ─── Ценности ──────────────────────────────── */
+    #values {
+      padding: 8rem 10%;
+      background: var(--charcoal);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    #values .section-label { color: rgba(255,255,255,0.4); }
+    #values .section-title { color: #fff; margin-bottom: 3rem; }
+
+    .values-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .value-item {
+      padding: 1.8rem 2rem;
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .value-item:hover {
+      border-left-color: var(--terracotta);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .value-item h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .value-item p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    .values-steps { display: flex; flex-direction: column; gap: 2rem; }
+
+    .values-step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .values-step-num {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.72rem;
+      color: var(--terracotta);
+      letter-spacing: 0.1em;
+      min-width: 24px;
+      padding-top: 0.15rem;
+    }
+
+    .values-step h4 {
+      color: #fff;
+      font-size: 0.97rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .values-step p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    /* ─── Цены ───────────────────────────────────── */
+    #pricing {
+      padding: 8rem 10%;
+      background: var(--cream);
+    }
+
+    #pricing .section-label { color: var(--terracotta); }
+    #pricing .section-title { color: var(--charcoal); }
+    #pricing .section-subtitle { color: #666; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      margin-top: 4rem;
+    }
+
+    .price-card {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      position: relative;
+      border-top: 3px solid var(--ash);
+      transition: border-color 0.25s;
+    }
+
+    .price-card:hover { border-top-color: var(--terracotta); }
+
+    .price-card.featured {
+      background: var(--terracotta);
+      border-top-color: var(--terracotta);
+    }
+
+    .price-card .p-tag {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1rem;
+    }
+
+    .price-card.featured .p-tag { color: rgba(255,255,255,0.6); }
+
+    .price-card h3 {
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .price-card.featured h3 { color: #fff; }
+
+    .price-card .price-val {
+      font-size: 2rem;
+      font-family: 'Georgia', serif;
+      color: var(--terracotta);
+      line-height: 1;
+      margin: 1.2rem 0 0.4rem;
+    }
+
+    .price-card.featured .price-val { color: rgba(255,255,255,0.9); }
+
+    .price-card .price-desc {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.8rem;
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .price-card.featured .price-desc { color: rgba(255,255,255,0.55); }
+
+    .price-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .price-card ul li {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: #666;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .price-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--ash);
+    }
+
+    .price-card.featured ul li { color: rgba(255,255,255,0.7); }
+    .price-card.featured ul li::before { color: rgba(255,255,255,0.3); }
+
+    /* ─── С кем работаю ──────────────────────────── */
+    #who {
+      padding: 8rem 10%;
+      background: var(--olive);
+    }
+
+    #who .section-label { color: rgba(255,255,255,0.45); }
+    #who .section-title { color: #fff; }
+    #who .section-subtitle { color: rgba(255,255,255,0.65); }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      margin-top: 4rem;
+    }
+
+    .who-card {
+      background: rgba(0,0,0,0.2);
+      padding: 2rem 1.8rem;
+      transition: background 0.2s;
+    }
+
+    .who-card:hover { background: rgba(0,0,0,0.35); }
+
+    .who-card .who-abbr {
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      color: rgba(255,255,255,0.2);
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .who-card h4 {
+      color: #fff;
+      font-size: 0.97rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .who-card p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ─── Отзывы ─────────────────────────────────── */
+    #testimonials {
+      padding: 8rem 10%;
+      background: var(--charcoal);
+    }
+
+    #testimonials .section-label { color: rgba(255,255,255,0.4); }
+    #testimonials .section-title { color: #fff; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 4rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.04);
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .testimonial-card:hover { background: rgba(255,255,255,0.07); }
+
+    .testimonial-card .t-type {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 0.97rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-card .t-author {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
+    }
+
+    .testimonial-card .t-author strong {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.82rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .t-quote-mark {
+      position: absolute;
+      top: 1.5rem; right: 2rem;
+      font-size: 5rem;
+      font-family: 'Georgia', serif;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* ─── FAQ ────────────────────────────────────── */
+    #faq {
+      padding: 8rem 10%;
+      background: var(--cream);
+    }
+
+    #faq .section-label { color: var(--terracotta); }
+    #faq .section-title { color: var(--charcoal); }
+
+    .faq-list {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .faq-item {
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1.8rem 2rem;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      color: var(--charcoal);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover { color: var(--terracotta); }
+
+    .faq-question.open { color: var(--terracotta); }
+
+    .faq-icon {
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: currentColor;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .faq-icon::before { width: 12px; height: 1.5px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .faq-icon::after  { width: 1.5px; height: 12px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+    .faq-question.open .faq-icon::after { transform: translate(-50%,-50%) rotate(90deg); opacity: 0; }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer.open { max-height: 300px; }
+
+    .faq-answer p {
+      padding: 0 2rem 1.8rem;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.75;
+    }
+
+    /* ─── Выступления (внутри projects) ─────────── */
+    .appearances-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 4rem;
+    }
+
+    .appearance-item {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(255,255,255,0.04);
+      transition: background 0.2s;
+    }
+
+    .appearance-item:hover { background: rgba(255,255,255,0.07); }
+
+    .appearance-year {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+    }
+
+    .appearance-title {
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .appearance-title span {
+      display: block;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.2rem;
+    }
+
+    .appearance-format {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      padding: 0.3rem 0.75rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      white-space: nowrap;
+    }
+
     /* ─── Адаптив ───────────────────────────────── */
     @media (max-width: 960px) {
       .hero { grid-template-columns: 1fr; }
@@ -1140,20 +1550,25 @@
       .hero-text { padding: 3rem 6%; min-height: auto; }
       #about { grid-template-columns: 1fr; gap: 3rem; }
       .about-photo-wrap { display: none; }
+      #values { grid-template-columns: 1fr; gap: 4rem; }
       #contact { grid-template-columns: 1fr; gap: 3rem; }
       .audience-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
       .projects-row { grid-template-columns: 1fr; }
-      .approach-with-photo { grid-template-columns: 1fr; gap: 3rem; }
+      .approach-with-photo { grid-template-columns: 1fr; }
       .approach-photo { display: none; }
       .form-row { grid-template-columns: 1fr; }
       nav ul { display: none; }
       .photo-strip { grid-template-columns: 1fr 1fr; }
       .photo-strip-item:last-child { display: none; }
+      .appearance-item { grid-template-columns: 60px 1fr; }
+      .appearance-format { display: none; }
     }
 
     @media (max-width: 580px) {
       .photo-strip { grid-template-columns: 1fr; }
       .photo-strip-item:last-child { display: block; }
+      .who-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -1164,9 +1579,10 @@
     <div class="logo">Предложение <span>·</span> для Ирины</div>
     <ul>
       <li><a href="#brand">Стиль</a></li>
-      <li><a href="#services">Услуги</a></li>
       <li><a href="#about">О вас</a></li>
-      <li><a href="#audience">Аудитория</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#testimonials">Отзывы</a></li>
       <li><a href="#projects">Проекты</a></li>
       <li><a href="#contact">Запись</a></li>
     </ul>
@@ -1321,55 +1737,6 @@
     </div>
   </section>
 
-  <!-- Услуги -->
-  <section id="services">
-    <p class="section-label">Раздел услуг — вот как я предлагаю их подать</p>
-    <h2 class="section-title">Ваши услуги</h2>
-    <p class="section-subtitle">Я выделила четыре направления по тому, что вы рассказали. Названия и описания — рабочий вариант, скажите что поправить.</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="num-badge">01</span>
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Супервизия для специалистов</h3>
-        <p>Это ваше основное направление. Разбираем сложные случаи, анализируем данные, выстраиваем программы. Предлагаем такое описание — ёмко и по делу.</p>
-        <span class="s-tag">Для специалистов ABA / психологов</span>
-      </div>
-
-      <div class="service-card">
-        <span class="num-badge">02</span>
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Консультация для родителей</h3>
-        <p>Второе ключевое направление. Родители приходят за ясностью — я предлагаю говорить с ними прямо: без обещаний лишнего, зато с конкретным результатом.</p>
-        <span class="s-tag">Для родителей детей с особенностями</span>
-      </div>
-
-      <div class="service-card">
-        <span class="num-badge">03</span>
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        </div>
-        <h3>Групповые супервизии</h3>
-        <p>Формат для команд и небольших групп. Вы упоминали его как отдельное направление — я вынесла его в самостоятельную карточку, чтобы команды видели, что это про них.</p>
-        <span class="s-tag">Для команд и групп</span>
-      </div>
-
-      <div class="service-card">
-        <span class="num-badge">04</span>
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h3>Разовые проекты и лекции</h3>
-        <p>Сюда будем добавлять ситуативные мероприятия — вы говорили, что хотели бы легко публиковать анонсы. Карточка будет живой — обновляем под каждый проект.</p>
-        <span class="s-tag">Следите за анонсами</span>
-      </div>
-    </div>
-  </section>
-
   <!-- О специалисте -->
   <section id="about">
     <div class="about-photo-wrap">
@@ -1393,17 +1760,205 @@
     </div>
   </section>
 
+  <!-- Ценности + Подход -->
+  <section id="values">
+    <div>
+      <p class="section-label">Ценности</p>
+      <h2 class="section-title">Почему именно так</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <h4>Доказательность</h4>
+          <p>Только методы с доказанной эффективностью. Никакой «авторской методики» без научной базы.</p>
+        </div>
+        <div class="value-item">
+          <h4>Честность</h4>
+          <p>Говорю прямо — что реально, что нет. Не обещаю того, чего не может быть.</p>
+        </div>
+        <div class="value-item">
+          <h4>Качество</h4>
+          <p>Стандарт — высокий. Для себя и для тех, кого обучаю. Потому что за каждым специалистом стоит ребёнок.</p>
+        </div>
+        <div class="value-item">
+          <h4>Индивидуальность</h4>
+          <p>Нет универсальных программ. Каждый ребёнок и каждый специалист — отдельная история.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="section-label">Подход</p>
+      <h2 class="section-title">Как я работаю</h2>
+      <div class="values-steps">
+        <div class="values-step">
+          <span class="values-step-num">01</span>
+          <div>
+            <h4>Запрос</h4>
+            <p>Пишете в мессенджер или оставляете заявку. Коротко — о ситуации, о том, что нужно.</p>
+          </div>
+        </div>
+        <div class="values-step">
+          <span class="values-step-num">02</span>
+          <div>
+            <h4>Знакомство</h4>
+            <p>Первичная встреча: понимаем запрос, договариваемся о формате. Без лишних обязательств.</p>
+          </div>
+        </div>
+        <div class="values-step">
+          <span class="values-step-num">03</span>
+          <div>
+            <h4>Работа</h4>
+            <p>Супервизия, консультация или проект — в выбранном формате. Конкретно, измеримо, в срок.</p>
+          </div>
+        </div>
+        <div class="values-step">
+          <span class="values-step-num">04</span>
+          <div>
+            <h4>Результат</h4>
+            <p>Чёткие рекомендации. Человек уходит зная, что делать дальше — и возвращается снова.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services">
+    <p class="section-label">Раздел услуг — вот как я предлагаю их подать</p>
+    <h2 class="section-title">Ваши услуги</h2>
+    <p class="section-subtitle">Я выделила четыре направления по тому, что вы рассказали. Названия и описания — рабочий вариант, скажите что поправить.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="num-badge">01</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Супервизия для специалистов</h3>
+        <p>Разбираем сложные случаи, анализируем данные, выстраиваем программы. Для тех, кто хочет работать правильно и расти в профессии.</p>
+        <span class="s-tag">Для специалистов ABA / психологов</span>
+      </div>
+      <div class="service-card">
+        <span class="num-badge">02</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Консультация для родителей</h3>
+        <p>Помогаю разобраться в поведении ребёнка, выстроить стратегию дома и в школе. Без воды, прямо и честно.</p>
+        <span class="s-tag">Для родителей детей с особенностями</span>
+      </div>
+      <div class="service-card">
+        <span class="num-badge">03</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+        <h3>Групповые супервизии</h3>
+        <p>Формат для команд и небольших групп специалистов. Совместный разбор случаев, методическая поддержка.</p>
+        <span class="s-tag">Для команд и групп</span>
+      </div>
+      <div class="service-card">
+        <span class="num-badge">04</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Разовые проекты и лекции</h3>
+        <p>Интенсивы, мастер-классы, тематические встречи. Анонсы актуальных мероприятий — здесь на сайте.</p>
+        <span class="s-tag">Следите за анонсами</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section id="pricing">
+    <p class="section-label">Стоимость</p>
+    <h2 class="section-title">Цены</h2>
+    <p class="section-subtitle">Укажите реальные цифры — вставим. Пока placeholder. Можно добавить формат «по запросу» для части услуг.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <p class="p-tag">Индивидуально</p>
+        <h3>Супервизия</h3>
+        <div class="price-val">от ХХ ₽</div>
+        <p class="price-desc">Одна сессия / час</p>
+        <ul>
+          <li>Разбор случая</li>
+          <li>Анализ данных</li>
+          <li>Обратная связь письменно</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <p class="p-tag">Популярный</p>
+        <h3>Пакет супервизий</h3>
+        <div class="price-val">от ХХХ ₽</div>
+        <p class="price-desc">4 сессии / месяц</p>
+        <ul>
+          <li>Сопровождение случая</li>
+          <li>Поддержка между сессиями</li>
+          <li>Методические материалы</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <p class="p-tag">Для родителей</p>
+        <h3>Консультация</h3>
+        <div class="price-val">от ХХ ₽</div>
+        <p class="price-desc">Одна встреча / 60–90 мин</p>
+        <ul>
+          <li>Анализ поведения</li>
+          <li>Стратегии для дома</li>
+          <li>Ответы на вопросы</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <p class="p-tag">Для команд</p>
+        <h3>Групповая супервизия</h3>
+        <div class="price-val">По запросу</div>
+        <p class="price-desc">Формат и стоимость — индивидуально</p>
+        <ul>
+          <li>До 8 участников</li>
+          <li>Разбор нескольких случаев</li>
+          <li>Методическая поддержка</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- С кем работаю -->
+  <section id="who">
+    <p class="section-label">С кем работаю</p>
+    <h2 class="section-title">Диагнозы и особенности</h2>
+    <p class="section-subtitle">Работаю с детьми с разными особенностями развития. Уточните список — если что-то лишнее или не хватает чего-то важного.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-abbr">РАС</div>
+        <h4>Расстройства аутистического спектра</h4>
+        <p>Аутизм, синдром Аспергера и другие состояния спектра.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-abbr">СДВГ</div>
+        <h4>Синдром дефицита внимания и гиперактивности</h4>
+        <p>Нарушения внимания, импульсивность, гиперактивность.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-abbr">ЗРР</div>
+        <h4>Задержка речевого развития</h4>
+        <p>Нарушения коммуникации и речевого развития разной степени.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-abbr">ЗПР</div>
+        <h4>Задержка психического развития</h4>
+        <p>Нарушения когнитивного и эмоционального развития.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-abbr">ПП</div>
+        <h4>Проблемное поведение</h4>
+        <p>Агрессия, самоповреждение, стереотипии, отказ от требований.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-abbr">НН</div>
+        <h4>Нарушения навыков</h4>
+        <p>Бытовые навыки, социальные навыки, академические навыки.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Для кого -->
   <section id="audience">
     <p class="section-label">Ваши две аудитории — я разделила их визуально</p>
     <h2 class="section-title">Для кого вы работаете</h2>
-
     <div class="audience-grid">
       <div class="audience-card for-spec">
         <span class="big-letter">С</span>
         <p class="a-label">Аудитория 01</p>
         <h3>Специалисты</h3>
-        <p>Вы сказали: специалисты — основная аудитория. Я предлагаю говорить с ними напрямую: супервизия — это не проверка, это возможность расти. Список ниже — примерный, поправьте под себя.</p>
+        <p>ABA-терапевты, психологи, дефектологи — те, кто хочет работать лучше и профессиональнее. Супервизия — это не проверка, это возможность расти.</p>
         <ul>
           <li>Разбор сложных случаев</li>
           <li>Анализ программ и данных</li>
@@ -1411,13 +1966,12 @@
           <li>Методическая поддержка</li>
         </ul>
       </div>
-
       <div class="audience-card for-parents">
         <img src="photo/kids-akcent.jpg" alt="" style="position:absolute;bottom:0;right:0;width:180px;height:180px;object-fit:cover;object-position:center;opacity:0.18;pointer-events:none;" />
         <span class="big-letter">Р</span>
         <p class="a-label">Аудитория 02</p>
         <h3>Родители</h3>
-        <p>Вторая важная аудитория — родители детей с особенностями. Они устали от размытых советов. Я предлагаю говорить с ними вашим языком: прямо, без лишнего, с уважением к их ситуации.</p>
+        <p>Вы устали от противоречивых советов. Хотите понять своего ребёнка и знать, что делать. Говорю прямо — без лишнего, с уважением к вашей ситуации.</p>
         <ul>
           <li>Анализ поведения ребёнка</li>
           <li>Стратегии для дома и школы</li>
@@ -1428,74 +1982,143 @@
     </div>
   </section>
 
-  <!-- Фото-полоса -->
-  <div class="photo-strip">
-    <div class="photo-strip-item">
-      <img src="photo/strogo.jpg" alt="" />
-    </div>
-    <div class="photo-strip-item">
-      <img src="photo/tiho_rot.jpg" alt="" />
-    </div>
-    <div class="photo-strip-item">
-      <img src="photo/prosto_krasivaya_kartinka.jpg" alt="" />
-    </div>
-  </div>
-
-  <!-- Подход -->
-  <section id="approach">
-    <p class="section-label">Как выглядит процесс работы с вами — наш вариант</p>
-    <h2 class="section-title">Без воды. По делу.</h2>
-    <p class="section-subtitle">Вы говорили, что хотите профессионально, но не строго. Этот блок показывает структуру — посетитель понимает, что его ждёт и как вы работаете.</p>
-
-    <div class="approach-with-photo">
-      <div class="approach-photo">
-        <img src="photo/zamok.jpg" alt="Ирина Астафьева" />
+  <!-- Отзывы -->
+  <section id="testimonials">
+    <p class="section-label">Отзывы</p>
+    <h2 class="section-title">Что говорят клиенты</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <span class="t-quote-mark">"</span>
+        <p class="t-type">Специалист · ABA-терапевт</p>
+        <blockquote>«Текст отзыва от специалиста — сюда вставить реальный. Примерно 2–4 предложения о том, что дала супервизия.»</blockquote>
+        <div class="t-author"><strong>Имя Фамилия</strong>ABA-терапевт, город</div>
       </div>
-      <div class="approach-steps">
-        <div class="step">
-          <div class="step-dot">01</div>
-          <h3>Запрос</h3>
-          <p>Посетитель оставляет заявку или пишет в мессенджер — вы сказали, что это предпочтительный канал.</p>
-        </div>
-        <div class="step">
-          <div class="step-dot">02</div>
-          <h3>Знакомство</h3>
-          <p>Первичная встреча: понимаем запрос, договариваемся о формате. Без лишних обязательств с обеих сторон.</p>
-        </div>
-        <div class="step">
-          <div class="step-dot">03</div>
-          <h3>Работа</h3>
-          <p>Супервизия, консультация или проект — в выбранном формате. Конкретно, измеримо, в срок.</p>
-        </div>
-        <div class="step">
-          <div class="step-dot">04</div>
-          <h3>Результат</h3>
-          <p>Чёткие рекомендации. Человек уходит зная, что делать дальше — и возвращается снова.</p>
-        </div>
+      <div class="testimonial-card">
+        <span class="t-quote-mark">"</span>
+        <p class="t-type">Родитель</p>
+        <blockquote>«Текст отзыва от родителя — сюда вставить реальный. Что изменилось, что помогло, почему советует.»</blockquote>
+        <div class="t-author"><strong>Имя</strong>Мама ребёнка с РАС</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-quote-mark">"</span>
+        <p class="t-type">Специалист · Психолог</p>
+        <blockquote>«Ещё один отзыв от специалиста. Можно добавить сколько угодно карточек — сетка подстроится.»</blockquote>
+        <div class="t-author"><strong>Имя Фамилия</strong>Детский психолог</div>
+      </div>
+      <div class="testimonial-card">
+        <span class="t-quote-mark">"</span>
+        <p class="t-type">Родитель</p>
+        <blockquote>«Четвёртый отзыв. Хорошо если будет 4–6 штук — парные, от специалистов и родителей вперемешку.»</blockquote>
+        <div class="t-author"><strong>Имя</strong>Папа ребёнка с СДВГ</div>
       </div>
     </div>
   </section>
 
-  <!-- Проекты -->
-  <section id="projects">
-    <p class="section-label">Раздел проектов — живой, будем обновлять</p>
-    <h2 class="section-title">Ваши крупные форматы</h2>
-    <p class="section-subtitle">Вы говорили о большом проекте — лекции на 300 человек. Я сделала для него featured-карточку. Остальное — шаблоны, которые легко обновлять под каждое новое мероприятие.</p>
+  <!-- Фото-полоса -->
+  <div class="photo-strip">
+    <div class="photo-strip-item"><img src="photo/strogo.jpg" alt="" /></div>
+    <div class="photo-strip-item"><img src="photo/tiho_rot.jpg" alt="" /></div>
+    <div class="photo-strip-item"><img src="photo/prosto_krasivaya_kartinka.jpg" alt="" /></div>
+  </div>
 
+  <!-- Проекты + Выступления -->
+  <section id="projects">
+    <p class="section-label">Проекты и выступления</p>
+    <h2 class="section-title">Крупные форматы</h2>
+    <p class="section-subtitle">Анонсы мероприятий, конференции, лекции. Раздел живой — обновляем под каждое событие.</p>
     <div class="projects-row">
       <div class="project-featured">
         <h3>Большой проект — скоро</h3>
-        <p>Здесь будет анонс вашего большого мероприятия. Название, дата, формат — как только будет готово, вставим. Под большую лекцию здесь же разместим регистрацию и оплату.</p>
+        <p>Здесь будет анонс вашего большого мероприятия. Название, дата, формат — вставим как только будет готово. Под крупную лекцию здесь же разместим регистрацию и оплату.</p>
         <span class="soon">Анонс готовится</span>
       </div>
       <div class="project-aside">
         <div class="project-mini">
           <h4>Разовые лекции</h4>
-          <p>Карточка для ситуативных мероприятий — вы говорили, что хотите их добавлять сюда по мере появления.</p>
+          <p>Карточка для ситуативных мероприятий — добавляем по мере появления.</p>
         </div>
         <div class="project-mini">
           <h4>Интенсивы для команд</h4>
-          <p>Углублённые форматы для организаций. Если такого пока нет — карточку можно скрыть или заменить.</p>
+          <p>Углублённые форматы для организаций. Скрыть или заменить если неактуально.</p>
+        </div>
+      </div>
+    </div>
+    <div class="appearances-list">
+      <div class="appearance-item">
+        <span class="appearance-year">202Х</span>
+        <div class="appearance-title">Название конференции или лекции<span>Организатор / площадка</span></div>
+        <span class="appearance-format">Выступление</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">202Х</span>
+        <div class="appearance-title">Название вебинара или мастер-класса<span>Онлайн / платформа</span></div>
+        <span class="appearance-format">Вебинар</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">202Х</span>
+        <div class="appearance-title">Публикация или статья — если есть<span>Издание / сайт</span></div>
+        <span class="appearance-format">Публикация</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">Частые вопросы</p>
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Что такое ABA и чем отличается от других подходов?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>ABA (прикладной анализ поведения) — это научно обоснованный подход к изменению поведения, основанный на принципах бихевиоризма. В отличие от многих других методов, ABA опирается на измеримые данные и доказанную эффективность, а не на интуицию.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Для каких детей подходит ABA-терапия?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Методы ABA применяются при РАС, СДВГ, ЗРР, ЗПР и других нарушениях развития. Подход адаптируется под каждого ребёнка — не существует универсальной программы.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Чем супервизия отличается от обычного обучения?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Обучение даёт теорию. Супервизия — это разбор реальных случаев из вашей практики. Вы приходите с конкретной ситуацией и уходите с конкретным решением, а не с общими знаниями.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Как проходит первая консультация?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Первая встреча — знакомство. Вы рассказываете о ситуации, я задаю уточняющие вопросы. Вместе определяем запрос и формат дальнейшей работы. Никаких обязательств до того, как оба поймём, что это подходит.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Работаете ли вы онлайн?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Да, большинство форматов доступны онлайн. Уточните при записи — обсудим удобный вариант.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Сколько сессий нужно для результата?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <p>Зависит от запроса. Для разбора одного случая может хватить 1–2 встреч. Для системного сопровождения — несколько месяцев. Обсуждаем на первой встрече.</p>
         </div>
       </div>
     </div>
@@ -1585,5 +2208,14 @@
     <span>Поведенческий аналитик · Супервизор · ABA</span>
   </footer>
 
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
+      if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+    }
+  </script>
 </body>
 </html>
