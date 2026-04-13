@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Родительский курс — Ирина Астафьева</title>
+  <link rel="icon" href="photo/Logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo" style="display:flex;align-items:center;gap:0.75rem;">
+      <a href="index.html"><img src="photo/Logo.png" alt="Ирина Астафьева" style="height:36px;display:block;" /></a>
+      <a href="index.html" style="color:var(--ash);font-family:'Arial',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.85;text-decoration:none;">Ирина Астафьева</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="index.html#about">Обо мне</a></li>
+      <li><a href="index.html#services">Услуги</a></li>
+      <li><a href="index.html#pricing">Цены</a></li>
+      <li><a href="index.html#testimonials">Отзывы</a></li>
+      <li><a href="projects.html">Проекты</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Запись</a></li>
+    </ul>
+  </nav>
+
+  <!-- Герой -->
+  <section class="project-hero" style="background: var(--terracotta);">
+    <img class="bg-photo" src="photo/tiho_rot.jpg" alt="" style="object-position:center 30%;" />
+    <div class="project-hero-content">
+      <a href="projects.html" class="back-link">← Все проекты</a>
+      <p class="eyebrow">Для родителей · Онлайн</p>
+      <h1>Родительский<br>курс</h1>
+      <p>Практический онлайн-курс для родителей детей с особенностями развития. Понятно, честно, без лишнего.</p>
+    </div>
+  </section>
+
+  <!-- Скоро-баннер -->
+  <div style="background:rgba(0,0,0,0.35);padding:1.5rem 10%;display:flex;align-items:center;gap:1.5rem;">
+    <span style="font-family:'Arial',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.15);padding:0.4rem 0.9rem;">В разработке</span>
+    <span style="font-family:'Arial',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.5);">Курс готовится. Оставьте заявку — сообщим, когда откроется запись.</span>
+  </div>
+
+  <!-- О проекте -->
+  <section class="project-about">
+    <div>
+      <p class="section-label">О курсе</p>
+      <h2 class="section-title">Что это такое</h2>
+    </div>
+    <div class="project-about-text reveal">
+      <p>Здесь будет описание курса — для кого он, зачем он нужен, что родители получат в итоге. Ирина, напишите 2–3 абзаца от себя.</p>
+      <p>Например: откуда пришла идея курса, какую боль родителей он закрывает. Что отличает этот курс от других материалов в интернете — честность, прикладность, конкретика.</p>
+      <p>Третий абзац — про ваш подход к родителям. Как вы с ними говорите, что для вас важно в работе с семьями.</p>
+    </div>
+  </section>
+
+  <!-- Для кого -->
+  <section class="project-for-whom">
+    <p class="section-label">Участники</p>
+    <h2 class="section-title">Курс подойдёт, если...</h2>
+    <div class="for-whom-grid">
+      <div class="for-whom-item reveal">
+        <div class="fw-num">01</div>
+        <h4>Вы не понимаете поведение ребёнка</h4>
+        <p>Почему он так реагирует, что за этим стоит и как на это влиять — без крика и наказаний.</p>
+      </div>
+      <div class="for-whom-item reveal">
+        <div class="fw-num">02</div>
+        <h4>Вам дали диагноз — и что дальше</h4>
+        <p>РАС, СДВГ, ЗРР — вы только получили заключение и не знаете, с чего начать и что это вообще значит.</p>
+      </div>
+      <div class="for-whom-item reveal">
+        <div class="fw-num">03</div>
+        <h4>Хотите работать с командой специалистов</h4>
+        <p>Понять язык терапевтов, участвовать в процессе осознанно, задавать правильные вопросы.</p>
+      </div>
+      <div class="for-whom-item reveal">
+        <div class="fw-num">04</div>
+        <h4>Устали от противоречивых советов</h4>
+        <p>Интернет, соседи, другие родители — все говорят разное. Хотите опираться на что-то надёжное.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Фото -->
+  <div class="photo-strip" style="grid-template-columns:1fr 1fr;">
+    <div class="photo-strip-item"><img src="photo/kids-akcent.jpg" alt="" /></div>
+    <div class="photo-strip-item"><img src="photo/prosto_krasivaya_kartinka.jpg" alt="" /></div>
+  </div>
+
+  <!-- Формат -->
+  <section class="project-format">
+    <p class="section-label">Детали</p>
+    <h2 class="section-title">Формат курса</h2>
+    <div class="format-grid">
+      <div class="format-item reveal">
+        <p class="f-label">Формат</p>
+        <div class="f-val">Онлайн</div>
+        <p>Видеоуроки + материалы. Проходите в своём темпе, возвращаетесь к нужным темам когда угодно.</p>
+      </div>
+      <div class="format-item reveal">
+        <p class="f-label">Объём</p>
+        <div class="f-val">уточняется</div>
+        <p>Количество модулей и уроков будет опубликовано при запуске курса.</p>
+      </div>
+      <div class="format-item reveal">
+        <p class="f-label">Доступ</p>
+        <div class="f-val">навсегда</div>
+        <p>После оплаты — бессрочный доступ к материалам. Пересматривайте столько, сколько нужно.</p>
+      </div>
+      <div class="format-item reveal">
+        <p class="f-label">Стоимость</p>
+        <div class="f-val">уточняется</div>
+        <p>Цена будет объявлена при открытии регистрации. Оставьте заявку — сообщим первыми.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="project-cta">
+    <h2>Хотите узнать первыми?</h2>
+    <a href="index.html#contact" class="btn-primary">Оставить заявку</a>
+  </section>
+
+  <footer>
+    <span>© 2026 — Ирина Астафьева, ИП</span>
+    <span>Поведенческий аналитик · Супервизор · ABA</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
