@@ -129,7 +129,7 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   .projects-row { grid-template-columns: 1fr; }
   .audience-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
-  .who-grid { grid-template-columns: 1fr 1fr; }
+  .who-grid { grid-template-columns: 1fr; }
   #contact { grid-template-columns: 1fr; gap: 3rem; }
 }
 
@@ -731,6 +731,21 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 
 #projects .section-subtitle { color: rgba(217,217,217,0.65); }
 
+.section-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .section-header-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
 .projects-row {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -967,7 +982,7 @@ a.project-mini p { color: inherit; }
 
 .ya-form-wrap iframe {
   width: 100%;
-  min-height: 520px;
+  min-height: 100px;
   border: none;
   display: block;
 }
@@ -1729,7 +1744,7 @@ footer a:hover { color: var(--terracotta); }
 @media (max-width: 580px) {
   .photo-strip { grid-template-columns: 1fr; }
   .photo-strip-item:last-child { display: block; }
-  .who-grid { grid-template-columns: 1fr 1fr; }
+  .who-grid { grid-template-columns: 1fr; }
 }
 
 /* ─── Подстраницы — общее ────────────────────── */
@@ -2046,6 +2061,56 @@ footer a:hover { color: var(--terracotta); }
   .hub-grid { grid-template-columns: 1fr; padding: 0 6% 5rem; }
   .project-about { grid-template-columns: 1fr; gap: 3rem; }
   .project-cta { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .project-hero { padding: calc(64px + 2.5rem) 6% 3.5rem; }
+  .project-about { padding: 4rem 6%; }
+  .project-for-whom { padding: 4rem 6%; }
+  .for-whom-grid { grid-template-columns: 1fr; }
+  .project-format { padding: 4rem 6%; }
+  .format-grid { grid-template-columns: 1fr 1fr; }
+  .project-cta { padding: 4rem 6%; }
+}
+
+/* ─── Форма на странице проектов ────────────── */
+.projects-contact {
+  background: var(--cream);
+  padding: 7rem 10%;
+}
+
+.projects-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.projects-contact-text .section-label { color: var(--terracotta); }
+
+.projects-contact-text h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--charcoal);
+  margin: 0.5rem 0 1rem;
+}
+
+.projects-contact-text p {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.projects-contact-form iframe {
+  width: 100%;
+  min-height: 100px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .projects-contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .projects-contact { padding: 5rem 6%; }
 }
 
 /* ─── Анонсы ─────────────────────────────────── */
