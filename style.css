@@ -87,6 +87,61 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 
 @media (max-width: 768px) {
   .nav-cta { display: none; }
+  body { padding-bottom: 64px; }
+}
+
+/* ─── Мобильный боттом-бар ───────────────────── */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  height: 64px;
+}
+
+.mobile-nav-inner {
+  display: flex;
+  height: 100%;
+}
+
+.mobile-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  color: var(--terracotta-light);
+}
+
+.mobile-nav-item svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mobile-nav-item span {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav { display: block; }
 }
 
 /* Бургер */
