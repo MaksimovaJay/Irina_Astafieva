@@ -1643,7 +1643,44 @@ footer a:hover { color: var(--terracotta); }
   font-style: italic;
   color: rgba(255,255,255,0.8);
   line-height: 1.75;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+
+.t-text-wrap { margin-bottom: 1.5rem; }
+
+.t-expand-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--terracotta-light);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .t-text-wrap {
+    max-height: 4.8em;
+    overflow: hidden;
+    position: relative;
+  }
+  .t-text-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2em;
+    background: linear-gradient(transparent, rgba(40,40,50,0.95));
+  }
+  .t-text-wrap.expanded {
+    max-height: none;
+  }
+  .t-text-wrap.expanded::after { display: none; }
+  .t-expand-btn { display: inline-block; }
+  .t-expand-btn.hidden { display: none; }
 }
 
 .testimonial-card .t-author {

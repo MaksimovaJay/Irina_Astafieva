@@ -28,6 +28,15 @@ window.addEventListener('scroll', () => {
 });
 btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+/* Раскрытие отзывов на мобилке */
+document.querySelectorAll('.t-expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const wrap = btn.previousElementSibling;
+    wrap.classList.add('expanded');
+    btn.classList.add('hidden');
+  });
+});
+
 /* FAQ аккордеон */
 function toggleFaq(btn) {
   const answer = btn.nextElementSibling;
