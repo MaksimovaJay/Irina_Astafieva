@@ -755,6 +755,10 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   color: rgba(255,255,255,0.35);
 }
 
+a.project-featured { color: inherit; }
+a.project-featured h3,
+a.project-featured p { color: inherit; }
+
 .project-featured h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 
 .project-featured p {
@@ -793,6 +797,10 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   border-left-color: var(--terracotta);
   background: rgba(255,255,255,0.08);
 }
+
+a.project-mini { color: inherit; }
+a.project-mini h4,
+a.project-mini p { color: inherit; }
 
 .project-mini h4 {
   font-size: 0.97rem;
