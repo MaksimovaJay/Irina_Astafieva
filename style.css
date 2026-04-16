@@ -1136,6 +1136,10 @@ a.project-mini p { color: inherit; }
 
 #back-to-top:hover { background: var(--charcoal); }
 
+@media (max-width: 768px) {
+  #back-to-top { bottom: 74px; }
+}
+
 #back-to-top svg {
   width: 18px;
   height: 18px;
