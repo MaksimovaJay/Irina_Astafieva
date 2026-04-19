@@ -1,3 +1,9 @@
+/* Куки-плашка */
+if (localStorage.getItem('cookie_ok')) {
+  const bar = document.getElementById('cookieBar');
+  if (bar) bar.style.display = 'none';
+}
+
 /* Бургер */
 const navToggle = document.getElementById('navToggle');
 const navMenu   = document.getElementById('navMenu');
