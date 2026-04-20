@@ -1420,15 +1420,26 @@ a.project-mini p { color: inherit; }
 
 /* ─── Футер ─────────────────────────────────── */
 footer {
-  padding: 2rem 10%;
   background: #1a1a1f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: 'Arial', sans-serif;
   font-size: 0.72rem;
   color: rgba(217,217,217,0.3);
   letter-spacing: 0.08em;
+}
+
+.footer-top {
+  padding: 1.5rem 10%;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+.footer-bottom {
+  padding: 1.2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer a {
@@ -1437,7 +1448,12 @@ footer a {
   transition: color 0.2s;
 }
 
-footer a:hover { color: var(--terracotta); }
+footer a:hover { color: var(--terracotta-light); }
+
+@media (max-width: 600px) {
+  .footer-top { padding: 1.2rem 6%; gap: 0.5rem 1.5rem; }
+  .footer-bottom { padding: 1rem 6%; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+}
 
 /* ─── Ценности ──────────────────────────────── */
 #values {
