@@ -2257,6 +2257,40 @@ footer a:hover { color: var(--terracotta-light); }
   display: block;
 }
 
+.form-consents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-consents label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-consents input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  width: 14px;
+  height: 14px;
+  accent-color: var(--terracotta-light);
+  cursor: pointer;
+}
+
+.form-consents a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: underline;
+}
+
+.form-consents a:hover { color: #fff; }
+
 @media (max-width: 860px) {
   .project-cta-form-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .project-cta-form { padding: 5rem 6%; }
