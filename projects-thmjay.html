@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проекты — Ирина Астафьева</title>
+  <link rel="icon" href="photo/Logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo" style="display:flex;align-items:center;gap:0.75rem;">
+      <a href="index.html"><img src="photo/Logo.png" alt="Ирина Астафьева" style="height:36px;display:block;" /></a>
+      <a href="index.html" style="color:var(--ash);font-family:'Arial',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.85;text-decoration:none;">Ирина Астафьева</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="index.html#about">Обо мне</a></li>
+      <li><a href="index.html#services">Услуги</a></li>
+      <li><a href="index.html#pricing">Цены</a></li>
+      <li><a href="index.html#testimonials">Отзывы</a></li>
+      <li><a href="projects.html">Проекты</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Запись</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Контакты</a>
+  </nav>
+
+  <!-- Шапка страницы -->
+  <section class="subpage-hero">
+    <a href="index.html" class="back-link">← На главную</a>
+    <p class="eyebrow">Обучение и развитие</p>
+    <h1>Проекты</h1>
+    <p>Тренинги, авторские программы и супервизионные курсы — крупные форматы для специалистов и родителей.</p>
+  </section>
+
+  <!-- Анонсы -->
+  <section class="announcements">
+    <div class="announcements-header">
+      <div>
+        <p class="section-label" style="color:rgba(255,255,255,0.4);">Ближайшее</p>
+        <h2 style="color:#fff;font-size:clamp(1.4rem,2.5vw,2rem);">Анонсы</h2>
+      </div>
+    </div>
+    <div class="announcements-list">
+
+      <div class="announce-item">
+        <div class="announce-date">
+          <span class="announce-day">31</span>
+          <span class="announce-month">авг</span>
+        </div>
+        <div class="announce-body">
+          <h4>Тренинг Autism Partnership — старт</h4>
+          <p>Международный очный интенсив по ABA в Санкт-Петербурге. 6 дней практики и разборов с мировыми экспертами.</p>
+        </div>
+        <div class="announce-meta">
+          <span class="announce-tag">Очно · СПб</span>
+          <a href="autism-partnership.html" class="announce-link">Подробнее →</a>
+        </div>
+      </div>
+
+      <div class="announce-item">
+        <div class="announce-date">
+          <span class="announce-day">—</span>
+          <span class="announce-month">скоро</span>
+        </div>
+        <div class="announce-body">
+          <h4>Новый набор в «Супервизии про супервизии»</h4>
+          <p>Открывается набор в следующую группу. Небольшая группа, онлайн, разбор реальных случаев из практики участников.</p>
+        </div>
+        <div class="announce-meta">
+          <span class="announce-tag">Онлайн · Группа</span>
+          <a href="supervisions.html" class="announce-link">Подробнее →</a>
+        </div>
+      </div>
+
+      <div class="announce-item">
+        <div class="announce-date">
+          <span class="announce-day">—</span>
+          <span class="announce-month">апр</span>
+        </div>
+        <div class="announce-body">
+          <h4>Старт «Базовые настройки крутого ABA-инструктора»</h4>
+          <p>Групповые супервизии для инструкторов. 8 встреч, закрытая группа, работа на реальном материале участников.</p>
+        </div>
+        <div class="announce-meta">
+          <span class="announce-tag">Онлайн · Группа</span>
+          <a href="basic-skills.html" class="announce-link">Подробнее →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Сетка проектов -->
+  <div class="hub-grid">
+
+    <a href="autism-partnership.html" class="hub-card">
+      <div class="hub-card-photo">
+        <img src="photo/zamok.jpg" alt="Тренинг Autism Partnership" style="object-position:center;" />
+      </div>
+      <div class="hub-card-body">
+        <span class="hub-card-status upcoming">Регистрация скоро</span>
+        <h3>Тренинг и Семинар от Autism Partnership</h3>
+        <p>Международный практический интенсив от одного из мировых лидеров в области ABA. Для специалистов, которые хотят работать на уровне мировых стандартов.</p>
+        <div class="hub-card-meta">
+          <span>31 авг — 5 сент 2026 · СПб</span>
+          <span class="hub-card-arrow">Подробнее →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="supervisions.html" class="hub-card">
+      <div class="hub-card-photo">
+        <img src="photo/strogo.jpg" alt="Супервизии про супервизии" />
+      </div>
+      <div class="hub-card-body">
+        <span class="hub-card-status active">Идёт набор</span>
+        <h3>Супервизии про супервизии</h3>
+        <p>Групповой проект для кураторов и супервизоров, которые хотят вести своих специалистов к результату — уверенно и эффективно.</p>
+        <div class="hub-card-meta">
+          <span>Онлайн · Группа</span>
+          <span class="hub-card-arrow">Подробнее →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="basic-skills.html" class="hub-card">
+      <div class="hub-card-photo">
+        <img src="photo/strogo.jpg" alt="Базовые настройки крутого ABA-инструктора" />
+      </div>
+      <div class="hub-card-body">
+        <span class="hub-card-status active">Идёт набор</span>
+        <h3>Базовые настройки крутого ABA-инструктора</h3>
+        <p>Групповые супервизии для инструкторов — клиническое мышление, управление поведением, решения в реальном времени.</p>
+        <div class="hub-card-meta">
+          <span>Апрель 2026 · Онлайн</span>
+          <span class="hub-card-arrow">Подробнее →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Форма заявки -->
+  <section class="projects-contact">
+    <div class="projects-contact-inner">
+      <div class="projects-contact-text">
+        <p class="section-label">Заявка</p>
+        <h2>Интересует один из проектов?</h2>
+        <p>Оставьте заявку — расскажем подробности, ответим на вопросы и сообщим, когда откроется запись.</p>
+      </div>
+      <div class="projects-contact-form">
+        <script src="https://forms.yandex.ru/_static/embed.js"></script>
+        <iframe src="https://forms.yandex.ru/u/69e0b79b068ff07d040011ef?iframe=1" frameborder="0" name="ya-form-69e0b79b068ff07d040011ef" width="100%"></iframe>
+        <script>window.addEventListener("message",function(e){if(e.data&&e.data.source==="ya-form-69e0b79b068ff07d040011ef"){document.querySelector("[name='ya-form-69e0b79b068ff07d040011ef']").style.height=e.data.height+"px";}});</script>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <a href="document/Публичная_оферта_о_заключении_договора_об_оказании_платных_дополнительных.pdf" target="_blank">Публичная оферта</a>
+      <a href="document/оферта мероприятие.pdf" target="_blank">Оферта на мероприятие</a>
+      <a href="document/Политика конфиденциальности.pdf" target="_blank">Политика конфиденциальности</a>
+      <a href="document/CОГЛАСИЕ_НА_ОБРАБОТКУ_ПЕРСОНАЛЬНЫХ_ДАННЫХ.pdf" target="_blank">Согласие на обработку данных</a>
+      <a href="document/СОГЛАСИЕ_НА_ПОЛУЧЕНИЕ_РАССЫЛКИ_И_РЕКЛАМНЫХ_МАТЕРИАЛОВ.pdf" target="_blank">Согласие на рассылку</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 — Ирина Астафьева, ИП</span>
+      <span>Поведенческий аналитик · Супервизор · ABA</span>
+    </div>
+  </footer>
+
+  <div class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="index.html#services" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        <span>Услуги</span>
+      </a>
+      <a href="projects.html" class="mobile-nav-item active">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Проекты</span>
+      </a>
+      <a href="index.html#pricing" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span>Цены</span>
+      </a>
+      <a href="index.html#contact" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Запись</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Куки-плашка -->
+  <div class="cookie-bar" id="cookieBar">
+    <span>Сайт использует cookies для работы форм. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</span>
+    <button onclick="document.getElementById('cookieBar').style.display='none';localStorage.setItem('cookie_ok','1')">Понятно</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
