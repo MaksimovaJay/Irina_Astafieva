@@ -226,6 +226,7 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .hero-text .eyebrow {
