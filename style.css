@@ -87,7 +87,6 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 
 @media (max-width: 768px) {
   .nav-cta { display: none; }
-  .nav-ibao { display: none; }
   body { padding-bottom: 64px; }
 }
 
