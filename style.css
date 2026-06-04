@@ -2384,6 +2384,12 @@ footer a:hover { color: var(--terracotta-light); }
   gap: 2px;
 }
 
+a.announce-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .announce-item {
   display: grid;
   grid-template-columns: 72px 1fr auto;
