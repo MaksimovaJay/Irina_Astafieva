@@ -233,22 +233,22 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
-  height: 100px;
+  height: 140px;
   width: auto;
   opacity: 0.92;
   z-index: 2;
 }
 
 @media (max-width: 1280px) {
-  .ibao-hero-badge { height: 80px; }
+  .ibao-hero-badge { height: 115px; }
 }
 
 @media (max-width: 960px) {
-  .ibao-hero-badge { height: 64px; top: 1rem; left: 1rem; }
+  .ibao-hero-badge { height: 90px; top: 1rem; left: 1rem; }
 }
 
 @media (max-width: 600px) {
-  .ibao-hero-badge { height: 52px; }
+  .ibao-hero-badge { height: 70px; }
 }
 
 .hero-text .eyebrow {
