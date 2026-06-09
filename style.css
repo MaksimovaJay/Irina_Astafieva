@@ -248,7 +248,7 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 }
 
 @media (max-width: 600px) {
-  .ibao-hero-badge { height: 70px; }
+  .ibao-hero-badge { display: none; }
 }
 
 .hero-text .eyebrow {
