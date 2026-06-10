@@ -241,11 +241,11 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 }
 
 @media (max-width: 960px) {
-  .ibao-hero-badge { height: 80px; }
+  .ibao-hero-badge { height: 110px; }
 }
 
 @media (max-width: 600px) {
-  .ibao-hero-badge { height: 64px; }
+  .ibao-hero-badge { height: 100px; }
 }
 
 @media (max-width: 430px) {
@@ -1931,7 +1931,7 @@ footer a:hover { color: var(--terracotta-light); }
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
-  .hero-text { padding: 3rem 6%; min-height: auto; }
+  .hero-text { padding: 1.5rem 6% 2rem; min-height: auto; justify-content: flex-start; }
   #about { grid-template-columns: 1fr; gap: 3rem; }
   .about-photo-wrap { display: none; }
   #values { grid-template-columns: 1fr; gap: 4rem; }
