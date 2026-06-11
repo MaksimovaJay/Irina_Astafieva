@@ -225,7 +225,7 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
   background: var(--terracotta);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .ibao-hero-badge {
