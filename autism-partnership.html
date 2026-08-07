@@ -134,6 +134,18 @@
         <script src="https://forms.yandex.ru/_static/embed.js"></script>
         <iframe src="https://forms.yandex.ru/u/69e9be0d02848f5976386db5?iframe=1" frameborder="0" name="ya-form-69e9be0d02848f5976386db5" width="100%"></iframe>
         <script>window.addEventListener("message",function(e){if(e.data&&e.data.source==="ya-form-69e9be0d02848f5976386db5"){document.querySelector("[name='ya-form-69e9be0d02848f5976386db5']").style.height=e.data.height+"px";}});</script>
+        <script>
+        (function () {
+          var COUNTER = 111316167;
+          window.addEventListener('message', function (e) {
+            if (e.origin !== 'https://forms.yandex.ru') return;
+            var d = e.data;
+            if (typeof d === 'string') { try { d = JSON.parse(d); } catch (err) { return; } }
+            if (!d || d.message !== 'sent') return;
+            if (typeof window.ym === 'function') ym(COUNTER, 'reachGoal', 'form_submit');
+          }, false);
+        })();
+        </script>
       </div>
     </div>
   </section>
