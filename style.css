@@ -835,6 +835,154 @@ nav ul a:hover { opacity: 1; color: var(--terracotta); }
 
 #projects .section-subtitle { color: rgba(217,217,217,0.65); }
 
+/* ─── Мероприятия ────────────────────────────── */
+#events {
+  padding: 8rem 10%;
+  background: var(--charcoal);
+  color: #fff;
+}
+
+#events .section-label { color: var(--olive-light); }
+#events .section-title { color: #fff; }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 4rem;
+}
+
+.event-card {
+  background: rgba(255,255,255,0.05);
+  padding: 3rem;
+  border-top: 3px solid var(--terracotta);
+}
+
+.event-card:first-child { background: var(--wine); border-top-color: var(--wine); }
+
+.event-gallery {
+  margin: -3rem -3rem 2rem;
+}
+
+.eg-cover,
+.eg-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  position: relative;
+  overflow: hidden;
+}
+
+.eg-cover img,
+.eg-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.eg-cover { aspect-ratio: 3 / 2; }
+.eg-cover:hover img,
+.eg-thumb:hover img { transform: scale(1.04); }
+
+.eg-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.eg-thumb { aspect-ratio: 1 / 1; }
+
+.eg-more {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30,30,36,0.6);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Лайтбокс */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(20,20,24,0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open { display: flex; }
+
+.lb-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox button {
+  position: absolute;
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.75;
+  line-height: 1;
+  padding: 1rem;
+}
+
+.lightbox button:hover { opacity: 1; }
+.lb-close { top: 0.5rem; right: 0.75rem; font-size: 2.5rem; }
+.lb-prev, .lb-next { top: 50%; transform: translateY(-50%); font-size: 3.5rem; }
+.lb-prev { left: 0.5rem; }
+.lb-next { right: 0.5rem; }
+
+.lb-count {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.6);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+.event-meta {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1rem;
+}
+
+.event-card h3 { font-size: 1.4rem; color: #fff; margin-bottom: 1rem; }
+
+.event-card p:not(.event-meta) {
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 900px) {
+  .events-grid { grid-template-columns: 1fr; }
+  .event-card { padding: 2.2rem 1.6rem; }
+  .event-gallery { margin: -2.2rem -1.6rem 1.6rem; }
+  .lb-prev, .lb-next { font-size: 2.5rem; padding: 0.5rem; }
+}
+
 .section-header-row {
   display: flex;
   align-items: flex-start;
@@ -1648,6 +1796,15 @@ footer a:hover { color: var(--terracotta-light); }
 
 .price-card.featured ul li { color: rgba(255,255,255,0.7); }
 .price-card.featured ul li::before { color: rgba(255,255,255,0.3); }
+
+.price-card .price-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #666;
+}
+
+.price-card.featured .price-text { color: rgba(255,255,255,0.8); }
 
 /* ─── С кем работаю ──────────────────────────── */
 #who {
