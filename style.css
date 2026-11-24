@@ -2086,7 +2086,7 @@ footer a:hover { color: var(--terracotta-light); }
 
 /* ─── Адаптив ───────────────────────────────── */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: 1fr; height: auto; min-height: 100vh; min-height: 100svh; }
   .hero-visual { display: none; }
   .hero-text { padding: 1.5rem 6% 2rem; min-height: auto; justify-content: flex-start; }
   #about { grid-template-columns: 1fr; gap: 3rem; }
